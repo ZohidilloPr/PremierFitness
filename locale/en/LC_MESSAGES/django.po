@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-01 11:04+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\config\settings.py:133
+msgid "Uzbek"
+msgstr ""
+
+#: .\config\settings.py:134
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:135
+msgid "Russion"
+msgstr ""
+
+#: .\main\views.py:21 .\main\views.py:55
+msgid ""
+"Biz bilan bog'lanish istagida bolganingiz uchun minnadormiz. Siz bilan "
+"mutaxasislarimiz aloqaga chiqadi."
+msgstr "Thank you for your interest in contacting us. Our specialists will contact you."
+
+#: .\main\views.py:23
+msgid ""
+"Afsuski sizning murojatingiz yuborilmadi, iltimos qaytadan urinib ko'ring."
+msgstr "Unfortunately, your request could not be sent, please try again."
+
+#: .\main\views.py:31
+msgid "Name"
+msgstr ""
+
+#: .\main\views.py:32
+msgid "Xabar"
+msgstr "Message"
+
+#: .\main\views.py:33
+msgid "Telefon raqam"
+msgstr "Phone Number"
+
+#: .\main\views.py:35
+msgid "Savolni yuborish"
+msgstr "Send a question"
+
+#: .\main\views.py:36
+msgid "Bizning manzil"
+msgstr "Our adress"
+
+#: .\main\views.py:37
+msgid "Savollaringiz bormi"
+msgstr "Have you any question?"
+
+#: .\main\views.py:38
+msgid "Toshkent shahri Bektemir tumani 191-uy 2-3 qavat"
+msgstr "191, Bektemir district, Tashkent city"
+
+#: .\main\views.py:57
+msgid ""
+"Afsuski sizning murojatingiz yuborilmadi, iltimos qaytadan urinib ko'ring"
+msgstr "Unfortunately, your request could not be sent, please try again."
+
+#: .\templates\index.html:98
+msgid "Bosh sahifa"
+msgstr "Home"
+
+#: .\templates\index.html:104 .\templates\index.html:215
+msgid "Biz haqimizda"
+msgstr "About us"
+
+#: .\templates\index.html:110
+msgid " Mashg‘ulotlar jadvali"
+msgstr "Training schedule"
+
+#: .\templates\index.html:116
+msgid "Biz bilan bog‘laning"
+msgstr "Contact us"
+
+#: .\templates\index.html:153
+msgid "Sog'lom hayot uchun birinchi qadam"
+msgstr "The first step to a healthy life"
+
+#: .\templates\index.html:157
+msgid "Premier Fitness bilan o‘zingizni doimgidan ko'ra kuchliroq his qiling"
+msgstr "Feel stronger than ever with Premier Fitness"
+
+#: .\templates\index.html:160
+msgid "Olg‘a"
+msgstr "Go"
+
+#: .\templates\index.html:164
+msgid "batafsil"
+msgstr "For more"
+
+#: .\templates\index.html:178
+msgid "Tariflar"
+msgstr "Price"
+
+#: .\templates\index.html:180
+msgid "Abonement <b style=\"color: #f13a11;\"> 200 000 </b> so'mdan boshlanadi"
+msgstr "Subscription for a month started from <b style=\"color: #f13a11;\"> 200 000 </b> UZS"
+
+#: .\templates\index.html:182
+msgid ""
+" Premier Fitnessda barcha sharoitlar mavjud. Dush, kiyinish xonasi va kardio "
+"zona. Alohida ajratilgan ayollar zali"
+msgstr "Premier Fitness has it all. Shower, changing room and cardio zone. Separate women's lounge"
+
+#: .\templates\index.html:183
+msgid " Dushanbani kutmang, hoziroq bizga qo'shiling! "
+msgstr "Don't wait until Monday, start with us now!"
+
+#: .\templates\index.html:185 .\templates\index.html:366
+msgid "A'zo bo'lish"
+msgstr "Subscribe"
+
+#: .\templates\index.html:191
+msgid "Ish vaqti:"
+msgstr "Working mode"
+
+#: .\templates\index.html:193
+msgid "Dushanba - Juma"
+msgstr "from Mondays to Fridays"
+
+#: .\templates\index.html:197
+msgid "Shanba"
+msgstr "Saturdays"
+
+#: .\templates\index.html:201
+msgid "<span style=\"color: #f13a11;\">Yakshanba</span> : Dam olish kuni"
+msgstr "<span style=\"color: #f13a11;\">Sundays</span> : Day off"
+
+#: .\templates\index.html:218
+msgid ""
+" bu qulaylik, professionallik va hurmatni qadrlaydigan muvaffaqiyatli "
+"odamlar uchun fitnes-klub. Bugungi kunda sog'lom bo'lish, nozik qomatli, "
+"chiroyli teriga ega bo'lish qimmatbaho mashina va bank hisob raqamiga ega "
+"bo'lishdan kam emas. "
+msgstr "'PREMIER' is a fitness club for successful people who value comfort, professionalism and respect. Today, being healthy, having a slim figure, well-groomed skin is no less prestigious than owning an expensive car and a bank account. Fitness club 'PREMIER' - all kinds of fitness services, stylish design, cozy bar, highly qualified instructors and friendly staff. Our club is for those who want not only to relax, but also to gain new knowledge, skills and impressions, feel renewed and change the usual rhythm of life. For those who want to spend their leisure time with health benefits. Our mission is to make your classes as comfortable and effective as possible. We have the best value for money."
+
+#: .\templates\index.html:222
+msgid ""
+" klubi - barcha turdagi fitnes xizmatlari, zamonaviy dizayn, qulay bar, "
+"yuqori malakali o'qituvchilar va samimiy xodimlar. Bizning klub nafaqat dam "
+"olishni, balki yangi bilim, ko'nikma va taassurotlarga ega bo'lishni, "
+"yangilanishni his qilishni va hayotning odatiy ritmini o'zgartirishni "
+"xohlaydiganlar uchundir. Bo'sh vaqtini sog'liq uchun foydali o'tkazmoqchi "
+"bo'lganlar uchun. Bizning vazifamiz sizning darslaringizni imkon qadar qulay "
+"va samarali qilishdir. Bizda pul uchun eng yaxshi qiymat bor. "
+msgstr ""
+
+#: .\templates\index.html:226
+msgid ""
+"Shu bilan birga bizda malakali mutaxasilar ham mavjud. Siz ham bizni jamoga "
+"qo'shiling va ozizgini ozgartiring."
+msgstr "Along with this, we have professional trainers. Join our team!"
+
+
+#: .\templates\index.html:236
+msgid "Bizni Ijtimoiy Tarmoqlarimiz"
+msgstr "We in social networks"
+
+#: .\templates\index.html:257
+msgid "Bizning Trainerlar"
+msgstr "Our team"
+
+#: .\templates\index.html:308
+msgid "Bizning 1 haftalik rejamiz"
+msgstr "One week plan"
+
+#: .\templates\index.html:310
+msgid "Jamoaviy mashqlar jadvali"
+msgstr "Group workouts plan"
+
+#: .\templates\index.html:376
+msgid " F.I.SH "
+msgstr "Name"
+
+#: .\templates\index.html:378
+msgid " Telefon raqam "
+msgstr "Phone number"
+
+#: .\templates\index.html:380
+msgid " Xabar "
+msgstr "Message"
+
+#: .\templates\index.html:382
+msgid "Yuborish"
+msgstr "Send"

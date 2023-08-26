@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+
+    <title>Premier Fitness</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %} ">
+    <link rel="shortcut icon" href="{% static 'images/fitness.png' %}" type="image/x-icon">
+
+    <!-- SLICK CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/tooplate-gymso-style.css' %} ">
+    <style>
+        /* -------------------------------------------
+                NEW SCHUDEL DESIGIN
+        -------------------------------------------- */
+        #schudel{
+            color: whitesmoke;
+        }
+        .title{
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #f13a11;
+        }
+        .body{
+            padding: 10px;
+            border: 1px solid #f13a11;
+        }
+        .body span{
+            padding-bottom: 5px;
+            transition: 0.3s all ease-in-out;
+        }
+        .body span:hover{
+            padding-left: 10px;
+            color: #f13a11;
+        }
+        .language_code{
+            color: white;
+            border: none;
+            background: none;
+        }
+        .language_code option{
+            background: #333;
+        }
+        .refresh{
+            padding: 0;
+            border: none;
+            outline: none;
+            color: white;
+            background: none;
+        }
+        .social_btn{
+            display: block;
+            color: white;
+            padding: 10px 25px;
+            border: 1px solid white;
+        }
+        .social_btn:hover{
+            color: #f13a11;
+            background-color: white;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+    {% include "messages.htm" %}
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <!-- <b style="color: #f13a11;">Premier</b> Fitness -->
+                <img src="{% static 'images/logo_fitness.png' %}" class="img-fluid" width="200" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link smoothScroll"> 
+                            {% blocktrans %}Bosh sahifa{% endblocktrans %}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">
+                            {% blocktrans %}Biz haqimizda{% endblocktrans %}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#schedule" class="nav-link smoothScroll">
+                            {% blocktrans %} Mashg‘ulotlar jadvali{% endblocktrans %}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link smoothScroll">
+                            {% blocktrans %}Biz bilan bog‘laning{% endblocktrans %}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <form action="{% url 'set_language' %}" class="" id="lang_form" onchange="change_lang()" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language" class="language_code">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.code }}
+                                    </option>
+                                {% endfor %}
+                            </select> 
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+
+        <div class="bg-overlay"></div>
+
+            <div class="container">
+                <div class="row">
+
+                        <div class="col-lg-8 col-md-10 mx-auto col-12">
+                            <div class="hero-text mt-5 text-center">
+
+                                <h6 data-aos="fade-up" data-aos-delay="300">
+                                    {% blocktrans %}Sog'lom hayot uchun birinchi qadam{% endblocktrans %}
+                                </h6>
+
+                                <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">
+                                    {% blocktrans %}Premier Fitness bilan o‘zingizni doimgidan ko'ra kuchliroq his qiling{% endblocktrans %}
+                                </h1>
+                                <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">
+                                    {% blocktrans %}Olg‘a{% endblocktrans %}
+                                </a>
+
+                                <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">
+                                    {% blocktrans %}batafsil{% endblocktrans %}
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </section> 
+
+
+    <section class="feature" id="feature">
+        <div class="container">
+            <div class="row">
+
+                <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
+                    <h2 class="mb-3 text-white" data-aos="fade-up">{% blocktrans %}Tariflar{% endblocktrans %}</h2>
+
+                    <h6 class="mb-4 text-white" data-aos="fade-up">{% blocktrans %}Abonement <b style="color: #f13a11;"> 200 000 </b> so'mdan boshlanadi{% endblocktrans %}</h6>
+
+                    <p data-aos="fade-up" data-aos-delay="200">{% blocktrans %} Premier Fitnessda barcha sharoitlar mavjud. Dush, kiyinish xonasi va kardio zona. Alohida ajratilgan ayollar zali{% endblocktrans %}</p>
+                    <p data-aos="fade-up" data-aos-delay="200">{% blocktrans %} Dushanbani kutmang, hoziroq bizga qo'shiling! {% endblocktrans %}</p>
+
+                    <a href="#" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="#membershipForm">{% blocktrans %}A'zo bo'lish{% endblocktrans %}</a>
+                </div>
+
+                <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
+                    <div class="about-working-hours">
+                        <div>
+                            <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">{% blocktrans %}Ish vaqti:{% endblocktrans %}</h2>
+
+                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">{% blocktrans %}Dushanba - Juma{% endblocktrans %}</strong>
+
+                            <p data-aos="fade-up" data-aos-delay="800">9:00 - 22:00</p>
+
+                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">{% blocktrans %}Shanba{% endblocktrans %}</strong>
+
+                            <p data-aos="fade-up" data-aos-delay="800">9:00 - 21:00</p>
+
+                            <strong class="d-block" data-aos="fade-up" data-aos-delay="600">{% blocktrans %}<span style="color: #f13a11;">Yakshanba</span> : Dam olish kuni{% endblocktrans %}</strong>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- ABOUT -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-12 col-md-10 mx-auto col-12 text-justify">
+                    <h2 class="mb-4 text-center" data-aos="fade-up" data-aos-delay="300">{% blocktrans %}Biz haqimizda{% endblocktrans %}</h2>
+
+                    <p data-aos="fade-up" data-aos-delay="400">
+                        <b style="color: #f13a11;">Premier</b> Fitness  - {% blocktrans %} bu qulaylik, professionallik va hurmatni qadrlaydigan muvaffaqiyatli odamlar uchun fitnes-klub. Bugungi kunda sog'lom bo'lish, nozik qomatli, chiroyli teriga ega bo'lish qimmatbaho mashina va bank hisob raqamiga ega bo'lishdan kam emas. {% endblocktrans %}
+                    </p>
+                    
+                    <p data-aos="fade-up" data-aos-delay="500">
+                        <b style="color: #f13a11;">Premier</b> fitness {% blocktrans %} klubi - barcha turdagi fitnes xizmatlari, zamonaviy dizayn, qulay bar, yuqori malakali o'qituvchilar va samimiy xodimlar. Bizning klub nafaqat dam olishni, balki yangi bilim, ko'nikma va taassurotlarga ega bo'lishni, yangilanishni his qilishni va hayotning odatiy ritmini o'zgartirishni xohlaydiganlar uchundir. Bo'sh vaqtini sog'liq uchun foydali o'tkazmoqchi bo'lganlar uchun. Bizning vazifamiz sizning darslaringizni imkon qadar qulay va samarali qilishdir. Bizda pul uchun eng yaxshi qiymat bor. {% endblocktrans %}
+                    </p>
+
+                    <p data-aos="fade-up" data-aos-delay="550">
+                        {% blocktrans %}Shu bilan birga bizda malakali mutaxasilar ham mavjud. Siz ham bizni jamoga qo'shiling va ozizgini ozgartiring.{% endblocktrans %} 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL NETWORK  -->
+    <section class="social_network section">
+        <div class="container">
+            <h3 class="text-center text-white mb-5" data-aos="fade-up">{% blocktrans %}Bizni Ijtimoiy Tarmoqlarimiz{% endblocktrans %}</h3>
+            <div class="row mt-3 p-4" data-aos="fade-up">
+                <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xxl-4 mx-auto text-center mb-4">
+                    <a href="" class="social_btn"> <i class="fa fa-facebook"></i> facebook</a>
+                </div>
+                <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xxl-4 mx-auto text-center mb-4">
+                    <a href="" class="social_btn"> <i class="fa fa-instagram"></i> instagram</a>
+                </div>
+                <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xxl-4 mx-auto text-center mb-4">
+                    <a href="" class="social_btn"> <i class="fa fa-youtube"></i> youtube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINERS -->
+    <section class="trainers section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="mb-5" data-aos="fade-up" data-aos-delay="300"> 
+                        {% blocktrans %}Bizning Trainerlar{% endblocktrans %}
+                    </h2>
+                </div>
+                <div class="col-12">
+                    <div id="trainers" class="" data-aos="fade-up" data-aos-delay="400">
+                        {% for t in trainers %}    
+                            <div class="trainer">
+                                <div class="row">
+                                    <div class="p-5 col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                                        <h3 class="text-dark">{{ t.f_name }}</h3>
+                                        <h5 style="color: #f13a11;" class="mb-4"> {{ t.professional }}</h5>
+                                        {% if "a" in t.about or "а" in t.about %}
+                                            <p class="text-secondary text-justify">
+                                                {{ t.about | safe }}  
+                                            </p>
+                                        {% else %}                                          
+                                            <p class="text-secondary text-justify">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae blanditiis voluptas eaque mollitia aliquid quo, pariatur odit odio dignissimos culpa nihil cumque numquam? Quam architecto aut officiis adipisci error dignissimos!
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae blanditiis voluptas eaque mollitia aliquid quo, pariatur odit odio dignissimos culpa nihil cumque numquam? Quam architecto aut officiis adipisci error dignissimos!
+                                            </p>
+                                        {% endif %}
+                                        <div class="trainer_footer mt-4" style="font-size: 20px;">
+                                            <p class="pb-0" style="color: #999; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Ijtimoiy tarmoqlar <i class="fa fa-link" aria-hidden="true"></i></p>
+                                            {% if t.facebook %}
+                                                <a href="{{ t.facebook.url }}" target="_blank" class="fa fa-facebook mr-2"></a>  
+                                            {% endif %}
+                                            {% if t.instagram %}  
+                                                <a href="{{ t.instagram.url }}" target="_blank" class="fa fa-instagram mr-2"></a>
+                                            {% endif %}
+                                            {% if t.telegram %}  
+                                                <a href="{{ t.telegram.url }}" target="_blank" class="fa fa-telegram"></a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="p-0 col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                        <img src="{{ t.img.url }}" class="img-fluid" alt="{{ t.f_name }}">
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %} 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="schedule section" id="schedule">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 text-center">
+                <h6 data-aos="fade-up">{% blocktrans %}Bizning 1 haftalik rejamiz{% endblocktrans %}</h6>
+
+                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">{% blocktrans %}Jamoaviy mashqlar jadvali{% endblocktrans %}</h2>
+            </div>
+
+            <div class="col-lg-12 py-5 col-md-12 col-12">
+                <div id="schudel" class="" data-aos="fade-up" data-aos-delay="700">
+                    {% for w in weeks %}
+                        <div class="schudel_l p-3">
+                            <div class="title">{{ w | title }}</div>
+                            <div class="body">
+                                {% for t in w.time.all %}
+                                    <span class="d-block">{{ t.come_time }}-dan {{ t.left_time }}-gacha</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        {% include "contact.htm" %}
+    </section>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="ml-auto col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <p class="copyright-text">Premier Fitness &copy; 2023 - {{ year }} </p>
+                </div>
+                <div class="d-flex justify-content-center mx-auto col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <p class="mr-4">
+                        <a href="" target="_blank" class="fa fa-facebook"></a>
+                        <a href="" target="_blank" class="fa fa-instagram"></a>
+                        <a href="" target="_blank" class="fa fa-youtube"></a>
+                    </p>
+
+                    <p class="mr-4">
+                        <i class="fa fa-envelope-o mr-1"></i>
+                        <a href="mailto:premier_fitness@gmail.com">premier_fitness@gmail.com</a>
+                    </p>
+
+                    <p><i class="fa fa-phone mr-1"></i>+998 99 899-93-33</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h2 class="modal-title" id="membershipFormLabel">{% blocktrans %}A'zo bo'lish{% endblocktrans %}</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form method="post" class="membership-form webform" role="form">
+                {% csrf_token %} 
+                <input type="text" class="form-control" name="m_f_name" required placeholder="{% blocktrans %} F.I.SH {% endblocktrans %}">
+
+                <input type="phone" class="form-control" name="m_phone" required placeholder="{% blocktrans %} Telefon raqam {% endblocktrans %}" value="+998 " maxlength="14" >   
+
+                <textarea class="form-control" rows="5" name="m_message" required placeholder="{% blocktrans %} Xabar {% endblocktrans %}"></textarea>
+                <button type="submit" class="form-control" id="submit-button" name="submit"> 
+                    {% blocktrans %}Yuborish{% endblocktrans %}
+                </button>
+            </form>
+          </div>
+
+          <div class="modal-footer"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/jquery.min.js' %} "></script>
+    <script src="{% static 'js/bootstrap.min.js' %} "></script>
+    <script src="{% static 'js/aos.js' %} "></script>
+    <script src="{% static 'js/smoothscroll.js' %} "></script>
+    <script src="{% static 'js/custom.js' %} "></script>
+    <!-- <script src="{% static 'js/slick.min.js' %} "></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function change_lang(){
+            document.getElementById("lang_form").submit();
+        }
+        $('#schudel').slick({
+            dots: true,
+            autoplay: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplaySpeed: 5000,
+            prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow">Previous</button>',
+            nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow">Next</button>',
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+        $('#trainers').slick({
+            dots: true,
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplaySpeed: 5000,
+            prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow">Previous</button>',
+            nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow">Next</button>',
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+    </script>
+</body>
+</html>

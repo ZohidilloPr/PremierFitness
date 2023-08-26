@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-01 11:04+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\config\settings.py:133
+msgid "Uzbek"
+msgstr ""
+
+#: .\config\settings.py:134
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:135
+msgid "Russion"
+msgstr ""
+
+#: .\main\views.py:21 .\main\views.py:55
+msgid ""
+"Biz bilan bog'lanish istagida bolganingiz uchun minnadormiz. Siz bilan "
+"mutaxasislarimiz aloqaga chiqadi."
+msgstr "Мы благодарны за то что хотите связаться с нами. Наши специалисты "
+"свяжутся с вами."
+
+#: .\main\views.py:23
+msgid ""
+"Afsuski sizning murojatingiz yuborilmadi, iltimos qaytadan urinib ko'ring."
+msgstr "К сожалению ваш запрос не отправился, пожалуйста попробуйте повторно отправить позже."
+
+#: .\main\views.py:31
+msgid "F.I.SH"
+msgstr "Ф.И.О."
+
+#: .\main\views.py:32
+msgid "Xabar"
+msgstr "Сообщение"
+
+#: .\main\views.py:33
+msgid "Telefon raqam"
+msgstr "Номер телефона"
+
+#: .\main\views.py:35
+msgid "Savolni yuborish"
+msgstr "Задать вопрос"
+
+#: .\main\views.py:36
+msgid "Bizning manzil"
+msgstr "Наш адрес"
+
+#: .\main\views.py:37
+msgid "Savollaringiz bormi"
+msgstr "Есть вопросы?"
+
+#: .\main\views.py:38
+msgid "Toshkent shahri Bektemir tumani 191-uy 2-3 qavat"
+msgstr "г.Ташкент Бектемирское шоссе, дом №191"
+
+#: .\main\views.py:57
+msgid ""
+"Afsuski sizning murojatingiz yuborilmadi, iltimos qaytadan urinib ko'ring"
+msgstr "К сожалению ваш запрос не отправился, пожалуйста попробуйте повторно отправить позже"
+
+#: .\templates\index.html:98
+msgid "Bosh sahifa"
+msgstr "Главная"
+
+#: .\templates\index.html:104 .\templates\index.html:215
+msgid "Biz haqimizda"
+msgstr "О нас"
+
+#: .\templates\index.html:110
+msgid " Mashg‘ulotlar jadvali"
+msgstr "Расписание занятий"
+
+#: .\templates\index.html:116
+msgid "Biz bilan bog‘laning"
+msgstr "Свяжитесь с нами"
+
+#: .\templates\index.html:153
+msgid "Sog'lom hayot uchun birinchi qadam"
+msgstr "Первый шаг к здоровому образу жизни"
+
+#: .\templates\index.html:157
+msgid "Premier Fitness bilan o‘zingizni doimgidan ko'ra kuchliroq his qiling"
+msgstr "Почувствуй свою силу вместе с Premier Fitness"
+
+#: .\templates\index.html:160
+msgid "Olg‘a"
+msgstr "Вперед!"
+
+#: .\templates\index.html:164
+msgid "batafsil"
+msgstr "подробно"
+
+#: .\templates\index.html:178
+msgid "Tariflar"
+msgstr "Тарифы"
+
+#: .\templates\index.html:180
+msgid "Abonement <b style=\"color: #f13a11;\"> 200 000 </b> so'mdan boshlanadi"
+msgstr "Абонементы"
+
+#: .\templates\index.html:182
+msgid ""
+" Premier Fitnessda barcha sharoitlar mavjud. Dush, kiyinish xonasi va kardio "
+"zona. Alohida ajratilgan ayollar zali"
+msgstr "В «Premier Fitness» именются все условия для комфортной тренировки. Зона кардио, груши, инвентарь соответствующая мировым стандартам. И у нас имеется отдельный женский зал"
+
+#: .\templates\index.html:183
+msgid " Dushanbani kutmang, hoziroq bizga qo'shiling! "
+msgstr "Не жди понедельника, начни прямо сейчас!"
+
+#: .\templates\index.html:185 .\templates\index.html:366
+msgid "A'zo bo'lish"
+msgstr "Записаться"
+
+#: .\templates\index.html:191
+msgid "Ish vaqti:"
+msgstr "Режим работы:"
+
+#: .\templates\index.html:193
+msgid "Dushanba - Juma"
+msgstr "Понедельник - пятница"
+
+#: .\templates\index.html:197
+msgid "Суббота"
+msgstr ""
+
+#: .\templates\index.html:201
+msgid "<span style=\"color: #f13a11;\">Yakshanba</span> : Dam olish kuni"
+msgstr "<span style=\"color: #f13a11;\">Воскресенье</span> : выходной день"
+
+#: .\templates\index.html:218
+msgid ""
+" bu qulaylik, professionallik va hurmatni qadrlaydigan muvaffaqiyatli "
+"odamlar uchun fitnes-klub. Bugungi kunda sog'lom bo'lish, nozik qomatli, "
+"chiroyli teriga ega bo'lish qimmatbaho mashina va bank hisob raqamiga ega "
+"bo'lishdan kam emas. "
+msgstr "«PREMIER» - фитнес клуб для успешных людей, ценящих комфорт, профессионализм и уважение. Сегодня быть здоровым, иметь стройную фигуру, ухоженную кожу не менее престижно, чем владеть дорогим автомобилем и счетом в банке. Фитнес клуб «PREMIER» - это все виды фитнес услуг, стильный дизайн, уютный бар, высококвалифицированные инструктора и доброжелательный персонал. "
+
+#: .\templates\index.html:222
+msgid ""
+" klubi - barcha turdagi fitnes xizmatlari, zamonaviy dizayn, qulay bar, "
+"yuqori malakali o'qituvchilar va samimiy xodimlar. Bizning klub nafaqat dam "
+"olishni, balki yangi bilim, ko'nikma va taassurotlarga ega bo'lishni, "
+"yangilanishni his qilishni va hayotning odatiy ritmini o'zgartirishni "
+"xohlaydiganlar uchundir. Bo'sh vaqtini sog'liq uchun foydali o'tkazmoqchi "
+"bo'lganlar uchun. Bizning vazifamiz sizning darslaringizni imkon qadar qulay "
+"va samarali qilishdir. Bizda pul uchun eng yaxshi qiymat bor. "
+msgstr "Наш клуб для тех, кто хочет не только отдохнуть, но и получить новые знания, навыки и впечатления, почувствовать себя обновленным и изменить привычный ритм жизни. Для желающих с пользой для здоровья провести досуг. Наша миссия – сделать Ваши занятия максимально комфортными и эффективными. У нас лучшее соотношение цены и качества."
+
+#: .\templates\index.html:226
+msgid ""
+"Shu bilan birga bizda malakali mutaxasilar ham mavjud. Siz ham bizni jamoga "
+"qo'shiling va ozizgini ozgartiring."
+msgstr "Вместе с этим у нас профессиональные тренера. Присоеденяйся к нашей команде!"
+
+#: .\templates\index.html:236
+msgid "Bizni Ijtimoiy Tarmoqlarimiz"
+msgstr "Мы в социальных сетях:"
+
+#: .\templates\index.html:257
+msgid "Bizning Trainerlar"
+msgstr "Наши тренера"
+
+#: .\templates\index.html:308
+msgid "Bizning 1 haftalik rejamiz"
+msgstr "Программа на 1 неделю"
+
+#: .\templates\index.html:310
+msgid "Jamoaviy mashqlar jadvali"
+msgstr "Расписание групповых занятий"
+
+#: .\templates\index.html:376
+msgid " F.I.SH "
+msgstr "Ф.И.О."
+
+#: .\templates\index.html:378
+msgid " Telefon raqam "
+msgstr "Номер для контакта"
+
+#: .\templates\index.html:380
+msgid " Xabar "
+msgstr "Сообщение"
+
+#: .\templates\index.html:382
+msgid "Yuborish"
+msgstr "Отправить"

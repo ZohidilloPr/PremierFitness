@@ -1,0 +1,12 @@
+PREMIUM FITNESS GYM WEB SITE:
+    TALABLAR:
+        0. Sport zalning xamma malumotlari ko'rinishi kerak.(
+            telefon raqam,
+            manzili,
+            location,
+        ).
+        1. zal xaqida malumot.
+        2. zalga kelish jadvali.
+        3. BMI hisoblagich.
+        4. Narxlar.
+
